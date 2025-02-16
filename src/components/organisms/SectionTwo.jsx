@@ -5,7 +5,7 @@ import Text from "../atoms/Text";
 import SvgIcon from "../atoms/SvgIcon";
 import BackgroundGrey from "../atoms/BackgroundGrey";
 import TitleBackground from "../moleculs/TitleBackground";
-import Card from "../atoms/card";
+import Card from "../atoms/Card";
 
 const Sectionstyle = styled.div`
     display: flex;
