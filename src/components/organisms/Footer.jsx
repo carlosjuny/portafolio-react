@@ -11,16 +11,7 @@ const FooterStyle = styled.div`
     flex-direction: column;
     width: 100%;
     height: 190px;
-    background-color: ${props => props.theme.PrimaryColor};
-
-    svg {
-    fill: #3A3A3A;
-  }
-
-  svg:hover {
-    fill: #f5f5f5;
-  }
-   
+    background-color: ${props => props.theme.PrimaryColor};   
 `
 
 const StyleText = styled(Text)`
@@ -72,7 +63,7 @@ const Footer = () => {
       <Network>
         <Link>
         <CircleNetwork>
-          <SvgIcon name='icon_facebook' size={25} fill="red" />
+          <SvgIcon name='icon_facebook' size={25} />
         </CircleNetwork>
         </Link>
         <Link to='https://github.com/carlosjuny' target='_blank'><CircleNetwork>

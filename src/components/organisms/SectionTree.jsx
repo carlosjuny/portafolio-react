@@ -59,9 +59,22 @@ const BackgroundGreyStyle = styled(BackgroundGrey)`
     gap: 30px;
   }
 
-  /* svg {
-    fill: #FFFFFF;
-  } */
+  .svgMobile {
+    position: absolute;
+    bottom: 15%;
+    left: -7%;
+    transform: rotateY(40deg) rotate(-15deg);
+    transform-origin: center;
+    perspective: 1000px;
+  }
+
+  .iconNetwork {
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+  }
+
 
   @media (min-width: 1024px) {
     width: 50%;
@@ -153,6 +166,22 @@ const BackgroundWhiteStyle = styled(BackgroundWhite)`
   .networkProject {
     display: flex;
     gap: 30px;
+  }
+  
+  .svgDesktop {
+    position: absolute;
+    top: -5%;
+    right: 5%;
+    transform-origin: center;
+    transform: rotate(20deg);
+    perspective: 1000px;
+  }
+
+  .iconNetwork {
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
   }
 
   @media (min-width: 768px) {
@@ -252,12 +281,13 @@ const SectionTree = () => {
                   <SvgIcon name='arrow' size={35}  style={{ transform: "rotate(-90deg)" }}/>
               </RightArrowButton>
               </div>
+            <SvgIcon name='mobile' size={200} color='#757575' className='svgMobile'/>
               <div className="networkProject">
               <Link to={githubUrls[mobileIndex]} target="_blank">
-                <SvgIcon name='icon_github' size={50} color='white'/>
+                <SvgIcon name='icon_github' size={50} color='white' className='iconNetwork'/>
                 </Link>
                 <Link to={deployUrls[mobileIndex]} target="_blank">
-                  <SvgIcon name='icon_deploy' size={50} color='white'/>
+                  <SvgIcon name='icon_deploy' size={50} color='white' className='iconNetwork'/>
                 </Link>
               </div>
           </BackgroundGreyStyle>
@@ -266,6 +296,7 @@ const SectionTree = () => {
               <div>
                 <StyleText h2='Desktop'/>
               </div>
+            <SvgIcon name='desktop' size={200} color='#757575' className='svgDesktop'/>
           <div className="mobile">
               <LeftArrowButtonDesktop onClick={handleNextDesktop}>
                   <SvgIcon name='arrow_left' size={35}   style={{ transform: "rotate(90deg)" }}/>
@@ -279,10 +310,10 @@ const SectionTree = () => {
           </div>
             <div className="networkProject">
             <Link to={githubUrls[desktopIndex]} target="_blank">
-              <SvgIcon name='icon_github' size={50} />
+              <SvgIcon name='icon_github' size={50} className='iconNetwork' />
             </Link>
             <Link to={deployUrls[desktopIndex]} target="_blank">
-              <SvgIcon name='icon_deploy' size={50} />
+              <SvgIcon name='icon_deploy' size={50} className='iconNetwork' />
             </Link>
             </div>
           </BackgroundWhiteStyle>

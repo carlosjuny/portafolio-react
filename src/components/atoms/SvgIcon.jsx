@@ -23,6 +23,8 @@ import instagram from '../../assets/svg/instagram.svg';
 import icon_linkedin from '../../assets/svg/icon_linkedin.svg';
 import mobile_project from '../../assets/svg/mobile_project.svg';
 import icon_deploy from '../../assets/svg/icon_deploy.svg';
+import mobile from '../../assets/svg/mobile.svg';
+import desktop from '../../assets/svg/desktop.svg';
 
 const icons = {
   figma,
@@ -47,7 +49,9 @@ const icons = {
   icon_linkedin,
   icon_github,
   mobile_project,
-  icon_deploy
+  icon_deploy,
+  mobile,
+  desktop
 };
 
 const SvgIcon = ({ name, size = 24, className, color, ...props }) => {

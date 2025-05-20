@@ -16,6 +16,11 @@ const CircleNetworkStyle = styled.div`
       background-color: ${props => props.theme.QuaternaryColor};
       transition: all 0.5s;
       border-radius: 50%;
+
+      svg {
+        fill: white;
+        transition: fill 0.5s;
+      }
       
     }
 `

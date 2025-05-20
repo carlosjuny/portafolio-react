@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import BackgroundWhite from '../moleculs/BackgroundWhite';
-import Photo from '../../assets/image/cm_photo.png';
+import Photo from '../../assets/image/cm.jpg';
 import Image from '../atoms/Image';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
@@ -31,8 +31,8 @@ const StyledImage = styled(Image)`
     height: 250px;
 
     @media (min-width: 1024px) {
-        width: 320px;
-        height: 320px;
+        width: 330px;
+        height: 325px;
         top: -30px;
     }
 `;
